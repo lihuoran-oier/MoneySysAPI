@@ -3,7 +3,7 @@ import json
 moneydata={'DrLee_lihr':0}
 
 def on_server_startup(server):
-    with open('./MoneyData/data.txt',mode="r") as file:
+    with open('./MoneyData/data.json',mode="r") as file:
         jsObj=file.read()
         file.close()
         moneydata=json.loads(jsObj)
@@ -11,7 +11,7 @@ def on_server_startup(server):
 
 def on_server_stop(server,returncode):
     jsObj=json.dumps(moneydata)
-    with open('./MoneyData/data.txt',mode='w') as file:
+    with open('./MoneyData/data.json',mode='w') as file:
         file.write(jsObj)
         file.close()
         jsObj=''
