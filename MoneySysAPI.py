@@ -51,6 +51,6 @@ def money_set(player,num):
 
 def money_set_safety(player,num):
     if 0>num:
-        raise ValueError("")
+        raise ValueError("用了Safety还搞负数？")
     else:
         moneydata[playername]=num
