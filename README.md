@@ -1,0 +1,2 @@
+# MoneySysAPI
+A MCDR plugin
